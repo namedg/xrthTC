@@ -1,5 +1,12 @@
 $(function () {
 
+    // 图片懒加载
+    // $("img.lazy").lazyload({
+    //     effect:"fadeIn",	//载入效果使用渐变
+	// 		threshold:100,		//离页面还有100px时开始加载
+	// 		// container:'$("#container")'	//对指定容器内的图片实现效果,lazyload默认对整个浏览器拉动滚动条的时候生效,建议不要指定容器,容易导致lazyload无效
+    // });
+
     //header导航栏固定
     $(window).scroll(function () {
         var headScrollTop = $(document).scrollTop()
@@ -10,12 +17,12 @@ $(function () {
                 'z-index': 20000,
                 'box-shadow': '0 3px 5px rgba(0, 0, 0, 0.1)',
             })
-            $('.wrap').css('margin-top','101px')
+            $('.wrap').css('margin-top', '101px')
         } else {
             $('.header').css({
                 "position": "relative",
             })
-            $('.wrap').css('margin-top',0)
+            $('.wrap').css('margin-top', 0)
         }
     })
 
@@ -30,11 +37,11 @@ $(function () {
         $(this).find(".small").stop(true, true).slideUp(200)
     })
 
-    $(".header .nav .nav-box ul .direction").mouseover(function(){
+    $(".header .nav .nav-box ul .direction").mouseover(function () {
         $(this).find('.iconfont').removeClass("icon-xia1")
         $(this).find('.iconfont').addClass("icon-shang1")
     })
-    $(".header .nav .nav-box ul .direction").mouseleave(function(){
+    $(".header .nav .nav-box ul .direction").mouseleave(function () {
         $(this).find('.iconfont').removeClass("icon-shang1")
         $(this).find('.iconfont').addClass("icon-xia1")
     })
