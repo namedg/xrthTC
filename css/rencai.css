@@ -1,0 +1,480 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+li {
+    list-style: none
+}
+
+a {
+    text-decoration: none
+}
+
+i {
+    font-style: normal;
+}
+
+/* 清除浮动 */
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.container {
+    width: 980px;
+    margin: 0 auto;
+}
+
+.lf {
+    float: left;
+}
+
+.rg {
+    float: right;
+}
+
+/*首页头部*/
+.header {
+    width: 100%;
+    height: 101px;
+    background-color: #fff
+}
+
+.header .nav {
+    height: 101px;
+}
+
+.header .nav .logo {
+    float: left;
+    width: 218px;
+    height: 62px;
+    margin-top: 20px;
+}
+
+.header .nav .logo img {
+    width: 100%;
+}
+
+.header .nav .nav-box {
+    float: right;
+    height: 101px;
+}
+
+.header .nav .nav-box ul li {
+    position: relative;
+    float: left;
+}
+
+.header .nav .nav-box ul li>a {
+    display: block;
+    padding: 0 15px;
+    font-size: 15px;
+    color: #777777;
+    margin-right: 8px;
+    line-height: 101px;
+}
+
+.header .nav .nav-box ul li .active {
+    background-color: #174FA4;
+    color: #fff
+}
+
+.header .nav .nav-box ul li .small {
+    position: absolute;
+    top: 101px;
+    left: 0;
+    width: 150px;
+    background-color: #174FA4;
+    z-index: 5;
+    display: none
+}
+
+.small li {
+    display: inline-block;
+    width: 130px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 8px;
+    color: #fff;
+    font-family: "宋体";
+    padding-left: 20px;
+}
+
+.small li span {
+    font-size: 14px;
+    font-family: "微软雅黑";
+}
+
+.small li span a {
+    color: #fff;
+}
+
+.small .first {
+    margin-top: 25px
+}
+
+.small .end {
+    margin-bottom: 25px
+}
+
+.small li span {
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: all 0.2s
+}
+
+.small li:hover span {
+    top: -2px;
+    left: 5px;
+}
+
+/* 职位搜索 */
+.position {
+    width: 100%;
+    height: 400px;
+    background: url(../image/recruit_banner.png) no-repeat 100% 100%;
+    background-size: 100% 100%;
+}
+
+.position .container {
+    position: relative;
+    height: 400px;
+}
+
+.position .position-content {
+    position: absolute;
+    width: 640px;
+    height: 58px;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+}
+
+.position .position-content .list {
+    position: relative;
+    font-size: 16px;
+    width: 128px;
+    height: 58px;
+    padding: 0 6px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.position .position-content .list p {
+    line-height: 58px;
+    padding-left: 24px;
+}
+
+.position .position-content .list i {
+    line-height: 58px;
+    padding-left: 8px;
+}
+
+.direction {
+    font-size: 12px !important;
+}
+
+.position .position-content .list .select-list {
+    position: absolute;
+    left: 15%;
+    top: 110%;
+    width: 100px;
+    height: 118px;
+    background: #fff;
+    padding: 6px 0;
+    text-align: center;
+    color: #666;
+    display: none;
+}
+
+.position .position-content .list .select-list li {
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.position .position-content .text {
+    width: 352px;
+    height: 54px;
+    margin-top: 1px;
+    background: #fff;
+    outline: none;
+    border: 1px solid #777777;
+}
+
+.position .position-content button {
+    width: 140px;
+    height: 60px;
+    background: #C8AF70;
+    border-radius: 0;
+    color: #fff;
+    border: 0;
+}
+
+/* 开放职位 */
+.open-position {
+    background: #FAFAFA;
+    padding-bottom: 70px;
+}
+
+.open-position .content .top-title {
+    text-align: center;
+    color: #333;
+    padding: 100px 0 70px;
+}
+
+.open-position .content .top-title h1 {
+    font-weight: 500;
+}
+
+.open-position .content .hot {
+    width: 100%;
+}
+
+.open-position .content .hot .ul-li {
+    position: relative;
+    float: left;
+    width: 27%;
+    height: 109px;
+    padding: 0 20px;
+    background: #FFF;
+    box-shadow: 0 6px 18px 0 rgb(0 0 0 / 14%)
+}
+
+.open-position .content .hot .red-text {
+    color: #F6572B;
+}
+
+.open-position .content .hot .ul-li:hover {
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.open-position .content .hot .ul-li:nth-child(2) {
+    margin: 10px 20px;
+}
+
+.open-position .content .hot .ul-li:nth-child(5) {
+    margin: 0 20px;
+}
+
+.open-position .content .hot .shang {
+    position: relative;
+    margin: 10px 0;
+}
+
+@media (max-width:1200px) {
+    .open-position .content .hot .ul-li {
+        width: 100%;
+        margin: 0 0 10px 0 !important;
+    }
+}
+
+.open-position .content .hot .font-top {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #333;
+}
+
+.open-position .content .hot .font-bottom {
+    color: #6A6A6A;
+    font-size: 14px;
+    margin-top: 65px;
+}
+
+.open-position .content .hot .font-bottom i {
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    background: #e0e0e0;
+    margin: 0 5px;
+}
+
+.open-position .content .hot .font-bottom .apply {
+    width: 66px;
+    height: 28px;
+    text-align: center;
+    line-height: 28px;
+    background: #C8AF70;
+    color: #fff;
+    margin-bottom: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+.open-position .content .hot .ul-li .msg {
+    position: absolute;
+    width: 87%;
+    top: 97px;
+    left: 0;
+    color: #6A6A6A;
+    font-size: 14px;
+    z-index: 100;
+    padding: 20px;
+    line-height: 24px;
+    background: #fff;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+.open-position .content .hot .shang .msg {
+    position: absolute;
+    z-index: 10000;
+
+}
+
+.open-position .content .hot .ul-li .msg p {
+    font-weight: bold;
+}
+
+.open-position .content .hot .ul-li .msg li {
+    list-style: decimal;
+}
+
+/* 最底部 */
+.footer {
+    width: 100%;
+}
+
+.footer .content {
+    height: 232px;
+    padding: 80px 0 30px 0;
+    color: #666;
+}
+
+.footer .content ul {
+    height: 232px;
+}
+
+.footer li {
+    width: 25%;
+    height: 100px;
+    float: left;
+}
+
+.footer .set {
+    width: 225px !important;
+}
+
+.footer li:first-child {
+    margin-right: 40px;
+}
+
+.footer li .title {
+    font-weight: bold;
+}
+
+.footer li .logo-img {
+    width: 165px;
+    height: 150px;
+    margin-bottom: 10px;
+    margin: 0 auto;
+}
+
+.footer li .logo-img img {
+    height: 130px;
+}
+
+.footer li dt {
+    padding-bottom: 12px;
+    color: black;
+}
+
+.footer li dd {
+    font-size: 14px;
+    line-height: 26px;
+}
+
+.footer li:last-child p {
+    font-size: 14px;
+    line-height: 40px;
+}
+
+.footer li .number {
+    font-weight: 500 !important;
+    font-size: 24px !important;
+    color: #212121 !important;
+}
+
+.footer li .last {
+    line-height: normal !important;
+    padding-top: 8px;
+}
+
+.footer li .text-one {
+    width: 70px;
+    height: 40px;
+}
+
+.footer li .text-two {
+    width: 160px;
+    height: 40px;
+}
+
+.footer .line-content {
+    width: 100%;
+    border-top: 1px solid rgb(168, 166, 166);
+    height: 50px;
+}
+
+.footer .line-content .writer {
+    height: 50px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #666;
+    /* margin-top: 10px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer .line-content .writer a {
+    font-size: 12px;
+    font-weight: 400;
+    color: #666;
+}
+
+.footer .line-content .writer img {
+    width: 16px;
+    height: 16px;
+    vertical-align: bottom;
+}
+
+/* 返回顶部 */
+.back-top {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    z-index: 1000;
+    width: 55px;
+    height: 55px;
+    color: #fff;
+    text-align: center;
+    line-height: 55px;
+    background: rgb(102, 156, 238);
+    border-radius: 50%;
+    box-shadow: 1px 1px 1px 1px rgba(101, 200, 224, 0.7);
+    display: none;
+}
+
+.back-top :hover {
+    cursor: pointer;
+}
+
+.back-top .huojian {
+    font-size: 28px;
+}
+
+.back-top .font {
+    display: none;
+    font-size: 12px;
+}
