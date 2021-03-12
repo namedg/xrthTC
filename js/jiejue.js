@@ -3,14 +3,14 @@ $(function () {
     //header导航栏固定
     $(window).scroll(function () {
         var headScrollTop = $(document).scrollTop()
-        if (headScrollTop > 101) {
+        if (headScrollTop > 81) {
             $('.header').css({
                 "position": 'fixed',
                 "top": 0,
                 'z-index': 20000,
                 'box-shadow': '0 3px 5px rgba(0, 0, 0, 0.1)',
             })
-            $('.project').css('margin-top', '101px')
+            $('.project').css('margin-top', '81px')
         } else {
             $('.header').css({
                 "position": "relative",
@@ -19,7 +19,7 @@ $(function () {
         }
     })
 
-    /*主页头部鼠标悬浮效果*/
+    // 主页头部鼠标悬浮效果
     $(".header .nav .nav-box ul li").mouseover(function () {
         $(this).find(".skip").addClass("active").end().siblings().find(".skip").removeClass("active")
         $(this).find(".small").stop(true, true).slideDown(100)
@@ -28,20 +28,24 @@ $(function () {
         $(this).find(".small").stop(true, true).slideUp(200)
     })
 
-    $(".header .nav .nav-box ul .direction").mouseover(function(){
+    $(".header .nav .nav-box ul .direction").mouseover(function () {
         $(this).find('.iconfont').removeClass("icon-xia1")
         $(this).find('.iconfont').addClass("icon-shang1")
     })
-    $(".header .nav .nav-box ul .direction").mouseleave(function(){
+    $(".header .nav .nav-box ul .direction").mouseleave(function () {
         $(this).find('.iconfont').removeClass("icon-shang1")
         $(this).find('.iconfont').addClass("icon-xia1")
     })
-    
-    $(".small li").mouseenter(function () {
-        $(this).css("background", "#205CB7")
+
+    $('.small li').mouseover(function () {
+        $(this).find('.img-first').attr('src', "../img/product_slices/cz-xz@2x.png");
+        $(this).find('.img-end').attr('src', "../img/product_slices/qy-xz@2x.png");
+        $(this).find('a').css('color', '#D2A26B')
     })
-    $(".small li").mouseleave(function () {
-        $(this).css("background", "#174FA4")
+    $('.small li').mouseleave(function () {
+        $(this).find('.img-first').attr('src', "../img/product_slices/cz-wxz@2x.png");
+        $(this).find('.img-end').attr('src', "../img/product_slices/qy-wxz@2x.png");
+        $(this).find('a').css('color', '#666')
     })
 
 

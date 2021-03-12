@@ -45,19 +45,19 @@ i {
 /*首页头部*/
 .header {
     width: 100%;
-    height: 101px;
+    height: 80px;
     background-color: #fff
 }
 
 .header .nav {
-    height: 101px;
+    height: 80px;
 }
 
 .header .nav .logo {
     float: left;
-    width: 218px;
-    height: 62px;
-    margin-top: 20px;
+    width: 180px;
+    height: 60px;
+    margin-top: 10px;
 }
 
 .header .nav .logo img {
@@ -66,7 +66,7 @@ i {
 
 .header .nav .nav-box {
     float: right;
-    height: 101px;
+    height: 80px;
 }
 
 .header .nav .nav-box ul li {
@@ -74,75 +74,64 @@ i {
     float: left;
 }
 
-.header .nav .nav-box ul li>a {
+.header .nav .nav-box ul>li>a {
     display: block;
     padding: 0 15px;
     font-size: 15px;
     color: #777777;
     margin-right: 8px;
-    line-height: 101px;
+    line-height: 80px;
 }
 
 .header .nav .nav-box ul li .active {
-    background-color: #174FA4;
+    background: #D2A26B;
     color: #fff
 }
 
 .header .nav .nav-box ul li .small {
     position: absolute;
-    top: 101px;
+    top: 80px;
     left: 0;
-    width: 150px;
-    background-color: #174FA4;
+    width: 180px;
+    background: #FFFFFF;
+    box-shadow: 0px 3px 3px 0px rgba(110, 59, 0, 0.2);
     z-index: 5;
     display: none
 }
 
 .small li {
-    display: inline-block;
-    width: 130px;
-    height: 30px;
-    line-height: 30px;
-    font-size: 8px;
-    color: #fff;
-    font-family: "宋体";
-    padding-left: 20px;
-}
-
-.small li span {
-    font-size: 14px;
-    font-family: "微软雅黑";
-}
-
-.small li span a {
-    color: #fff;
+    display: flex;
+    align-items: center;
+    width: 180px;
+    height: 50px;
+    font-size: 16px;
 }
 
 .small .first {
-    margin-top: 25px
-}
-
-.small .end {
-    margin-bottom: 25px
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .small li span {
-    position: relative;
-    top: 0;
-    left: 0;
-    transition: all 0.2s
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 9px 9px 9px 17px;
 }
 
-.small li:hover span {
-    top: -2px;
-    left: 5px;
+.small li span img {
+    width: 100%;
+}
+
+.small li a {
+    display: inline-block;
+    color: #666;
 }
 
 /* 关于我们背景 */
 .project {
     width: 100%;
     height: 400px;
-    background: url(../image/about_banner.png) no-repeat 100% 100%;
+    background: url(../img/aboutUs_slices/gywm.png) no-repeat 100% 100%;
     background-size: 100% 100%;
     color: #fff;
 }
@@ -173,37 +162,37 @@ i {
 /* 公司简介 */
 .introduce {
     width: 100%;
-    height: 600px;
+    height: 280px;
     position: relative;
 }
 
 .introduce .content {
-    height: 600px;
+    height: 280px;
     padding: 40px 0;
     position: absolute;
     bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
     background: #fff;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.1);
 
 }
 
 .introduce .content .logo-img {
-    width: 390px;
-    height: 200px;
-    margin-top: 160px;
-    text-align: center;
+    width: 150px;
+    height: 140px;
+    margin-top: 28px;
+    margin-left: 80px;
 }
 
 .introduce .content .logo-img img {
-    height: 200px;
+    height: 100%;
 }
 
 .introduce .content .text {
-    width: 503px;
-    height: 416px;
-    padding: 0 50px 0 5px;
+    width: 663px;
+    height: 290px;
+    padding: 0 30px 0 5px;
 }
 
 .introduce .content .text h3 {
@@ -216,51 +205,273 @@ i {
     color: #666;
     margin-bottom: 20px;
     font-size: 14px;
-    line-height: 25px;
+    line-height: 30px;
 }
 
 .introduce .content .text p i {
     display: inline-block;
 }
 
-/* 最底部 */
-.footer {
+/* 业务模式 */
+.business {
     width: 100%;
 }
 
-.footer .content {
-    height: 232px;
-    padding: 80px 0 30px 0;
+.business .content {
+    width: 65%;
+    margin: 0 auto;
+    /* background: blanchedalmond; */
+}
+
+.business .content .title {
+    width: 100%;
+    padding: 60px 0 50px 0;
+    text-align: center;
+    font-size: 34px;
+}
+
+.business .content .hot {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+}
+
+.business .content .hot li {
+    float: left;
+    width: 33.33%;
+    padding: 40px 10px;
+    cursor: pointer;
+}
+
+.business .content .hot li .wrap {
+    width: 100%;
+    height: 270px;
+    border: 1px solid #e6e6e6;
+    padding: 35px 18px;
+}
+
+.business .content .hot li .box-img {
+    width: 44px;
+    height: 44px;
+    margin: 0 auto;
+}
+
+.business .content .hot li .box-img img {
+    width: 100%;
+}
+
+.business .content .hot li .wrap .wrap-title {
+    color: #3f3f3f;
+    padding: 15px 0;
+}
+
+.business .content .hot li .wrap .wrap-text {
+    text-align: left;
     color: #666;
 }
 
-.footer .content ul {
-    height: 232px;
+@media (max-width:1200px) {
+    .business .content .hot li {
+        width: 33.3333%;
+    }
 }
 
-.footer li {
-    width: 25%;
+@media (max-width:992px) {
+    .business .content .hot li {
+        width: 100%;
+    }
+}
+
+.business .content .hot li .wrap:hover {
+    box-shadow: 0 0 6px rgba(121, 119, 118, 0.5);
+}
+
+.business .content .contact-us {
+    margin-top: 40px;
+}
+
+.business .content .contact-us ul {
+    display: flex;
+}
+
+.business .content .contact-us ul li {
+    flex: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100px;
+    cursor: pointer;
+    box-shadow: 0 0 1px rgba(121, 119, 118, 0.5);
+}
+
+.business .content .contact-us ul li .box-img {
+    width: 44px;
+    height: 44px;
+}
+
+.business .content .contact-us ul li .box-img img {
+    width: 100%;
+}
+
+.business .content .contact-us ul li .text {
+    padding-left: 20px;
+    line-height: 24px;
+    color: #707070;
+}
+
+.business .content .contact-us ul li .end {
+    position: relative;
+}
+
+.business .content .contact-us ul li .end .img1 {
+    position: absolute;
+    top: -266px;
+    left: -62px;
+    width: 230px;
+    height: 240px;
+    display: none;
+}
+
+.business .content .contact-us ul li .end .img2 {
+    position: absolute;
+    top: -26px;
+    right: -25px;
+    width: 57.7px;
+}
+
+.business .content .contact-us ul li .text p:nth-child(1) {
+    color: #303030;
+}
+
+.business .content .contact-us ul li:hover {
+    box-shadow: 0 0 6px rgba(121, 119, 118, 0.5);
+}
+
+.business .content .contact-us ul li .end:hover .img1 {
+    display: block;
+}
+
+/* 新闻资讯*/
+.news {
+    width: 100%;
+}
+
+.news .container {
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.news .content>.title {
+    width: 100%;
+    padding: 101px 0 80px 0;
+    text-align: center;
+    font-size: 34px;
+}
+
+.news .content .banner {
+    height: 310px;
+    overflow: hidden;
+}
+
+.news .content .banner .wrap {
+    width: 2665px;
+    height: 164px;
+    /* background: blueviolet; */
+}
+
+.news .content .banner .wrap li {
+    position: relative;
     float: left;
+    width: 303px;
+    margin: 0 15px 0 15px;
+    border: 1px solid #e6e6e6;
 }
 
-.footer .set {
-    width: 225px !important;
+.news .content .banner .wrap li img {
+    width: 303px;
 }
 
-.footer li:first-child {
-    margin-right: 40px;
+.news .content .banner .wrap p {
+    padding: 12px 15px 0 10px;
+}
+
+.news .content .banner .wrap .title {
+    font-size: 16px;
+    color: #3f3f3f;
+    font-weight: bold;
+}
+
+.news .content .banner .wrap .text {
+    font-size: 14px;
+    color: #666;
+    padding-bottom: 20px;
+}
+
+.news .content .dots {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.news .content .dots ol {
+    width: 100px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.news .content .dots li {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: blanchedalmond;
+}
+
+.news .content .dots .active {
+    transform: scale(1.3);
+
+}
+
+/* 最底部 */
+.footer {
+    width: 100%;
+    background: #29292a;
+    position: relative;
+    margin-top: 80px;
+}
+
+.footer .content {
+    padding-top: 60px;
+    color: #fff;
+}
+
+.footer .content ul {
+    height: 210px;
+    display: flex;
+}
+
+.footer .content ul li {
+    flex: 1.5;
+}
+
+.footer .content ul .first {
+    flex: 2.5;
+}
+
+.footer .content ul .end {
+    flex: 3.8;
 }
 
 .footer li .title {
-    font-weight: bold;
+    font-size: 16px;
+    /* font-weight: bold; */
 }
 
 .footer li .logo-img {
     width: 165px;
     height: 150px;
-    margin-bottom: 10px;
-    margin: 0 auto;
+    margin-left: 28px;
 }
 
 .footer li .logo-img img {
@@ -269,7 +480,7 @@ i {
 
 .footer li dt {
     padding-bottom: 12px;
-    color: black;
+    /* color: black; */
 }
 
 .footer li dd {
@@ -277,35 +488,26 @@ i {
     line-height: 26px;
 }
 
-.footer li:last-child p {
+.footer .content ul .end p {
     font-size: 14px;
-    line-height: 40px;
+}
+
+.footer .content ul .end .pt {
+    padding-top: 23px;
+}
+
+.footer .content ul .end p:nth-child(3) {
+    padding-top: 30px;
 }
 
 .footer li .number {
     font-weight: 500 !important;
     font-size: 24px !important;
-    color: #212121 !important;
-}
-
-.footer li .last {
-    line-height: normal !important;
-    padding-top: 8px;
-}
-
-.footer li .text-one {
-    width: 70px;
-    height: 40px;
-}
-
-.footer li .text-two {
-    width: 160px;
-    height: 40px;
 }
 
 .footer .line-content {
     width: 100%;
-    border-top: 1px solid rgb(168, 166, 166);
+    border-top: 1px solid #4f4f4f;
     height: 50px;
 }
 
@@ -313,17 +515,20 @@ i {
     height: 50px;
     font-size: 12px;
     font-weight: 400;
-    color: #666;
-    /* margin-top: 10px; */
+    color: #d4d4d4;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
 .footer .line-content .writer a {
     font-size: 12px;
     font-weight: 400;
-    color: #666;
+    color: #d4d4d4;
+}
+
+.footer .line-content .writer span {
+    padding: 0 10px;
 }
 
 .footer .line-content .writer img {
@@ -340,12 +545,12 @@ i {
     z-index: 1000;
     width: 55px;
     height: 55px;
-    color: #fff;
+    color: #D2A26B;
     text-align: center;
     line-height: 55px;
-    background: rgb(102, 156, 238);
+    background: #f4f4f4;
     border-radius: 50%;
-    box-shadow: 1px 1px 1px 1px rgba(101, 200, 224, 0.7);
+    box-shadow: 0 0 8px rgba(121, 119, 118, 0.5);
     display: none;
 }
 
@@ -354,7 +559,8 @@ i {
 }
 
 .back-top .huojian {
-    font-size: 28px;
+    font-size: 32px;
+    color: #D2A26B;
 }
 
 .back-top .font {
