@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../font/iconfont/iconfont.css">
     <script src="../js/jquery-1.12.4.js"></script>
     <script src="../js/jquery.lazyload.js"></script>
+    <script src="../js/jquery.validate.js"></script>
     <script src="../js/count.js"></script>
     <script src="../js/index.js"></script>
 </head>
@@ -44,7 +45,7 @@
                         <a href="./jiejue.html" class="skip">解决方案</a>
                     </li>
                     <li>
-                        <a href="javascript:;" class="skip">合作案例</a>
+                        <a href="./teamwork.html" class="skip">合作案例</a>
                     </li>
                     <li>
                         <a href="./rencai.html" class="skip">人才招聘</a>
@@ -60,7 +61,7 @@
     <div class="wrap">
         <div class="banner">
             <div class="img-box first">
-                <div class="text"></div>
+                <!-- <div class="text"></div> -->
             </div>
             <div class="img-box end">
                 <div class="text">
@@ -68,7 +69,9 @@
                     <h2>打造个性化行业解决方案，为用户提供一站式产品与服务</h2>
                 </div>
             </div>
-            <div class="img-box first"></div>
+            <div class="img-box first">
+                <!-- <div class="text"></div> -->
+            </div>
         </div>
         <div class="btn">
             <div class="left">&lt;</div>
@@ -90,6 +93,45 @@
             </ul>
         </div>
     </div>
+    <!-- 业务服务 -->
+    <div class="service">
+        <div class="content">
+            <div class="title">
+                <p>业务服务</p>
+            </div>
+            <div class="hot">
+                <ul>
+                    <li>
+                        <div class="hot-wrap">
+                            <div class="tu">
+                                <img src="../img/index_slices/xncz.png">
+                            </div>
+                            <h5>虚拟充值</h5>
+                            <p>提供游戏点卡分销、网游直充、手游直充、视讯网站会员直充。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="hot-wrap">
+                            <div class="tu">
+                                <img src="../img/index_slices/zf.png">
+                            </div>
+                            <h5 class="font-color">敬请期待</h5>
+                            <!-- <p></p> -->
+                        </div>
+                    </li>
+                    <li>
+                        <div class="hot-wrap">
+                            <div class="tu">
+                                <img src="../img/index_slices/jr.png">
+                            </div>
+                            <h5 class="font-color">敬请期待</h5>
+                            <!-- <p></p> -->
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <!-- 合作单位 -->
     <div class="units">
         <div class="content container">
@@ -99,40 +141,28 @@
             <div class="hot">
                 <ul>
                     <li>
-                        <img src="../img/index_slices/gd.png">
-                    </li>
-                    <li>
-                        <img src="../img/index_slices/yl.png">
-                    </li>
-                    <li>
-                        <img src="../img/index_slices/sq.png">
-                    </li>
-                    <li>
-                        <img src="../img/index_slices/wy.png">
-                    </li>
-                    <li>
-                        <img src="../img/index_slices/zm.png">
-                    </li>
-                    <li>
-                        <img src="../img/index_slices/bj.png">
-                    </li>
-                    <li>
-                        <img src="../img/index_slices/qtt.png">
-                    </li>
-                    <li>
                         <img src="../img/index_slices/cczc.png">
                     </li>
                     <li>
-                        <img src="../img/index_slices/xtd.png">
+                        <img src="../img/index_slices/T3.png">
                     </li>
                     <li>
-                        <img src="../img/index_slices/cczc.png">
+                        <!-- <img src="../img/index_slices/sq.png"> -->
                     </li>
                     <li>
-                        <img src="../img/index_slices/tcw.png">
+                        <!-- <img src="../img/index_slices/wy.png"> -->
                     </li>
                     <li>
-                        <img src="../img/index_slices/csb.png">
+                        <!-- <img src="../img/index_slices/zm.png"> -->
+                    </li>
+                    <li>
+                        <!-- <img src="../img/index_slices/bj.png"> -->
+                    </li>
+                    <li>
+                        <!-- <img src="../img/index_slices/qtt.png"> -->
+                    </li>
+                    <li>
+                        <!-- <img src="../img/index_slices/cczc.png"> -->
                     </li>
                 </ul>
             </div>
@@ -181,40 +211,43 @@
         </div>
     </div>
     <!-- 联系我们 -->
-    <div class="contact-us">
+    <div class="contact-us" id="linkFour">
         <h3>立即获取企业专属的解决方案</h3>
         <button class="us">联系我们</button>
-        <div class="popup">
-            <div class="title">
-                <div class="iconfont icon-cuowu contact-icon"></div>
-                <h2>业务咨询</h2>
-            </div>
-            <div class="form">
-                <div class="form-item-label">
-                    <label>公司名称：</label>
-                    <span class="iconfont icon-xinghao"></span>
-                    <input type="text" name="company" placeholder="输入您的公司名称">
+        <div class="shade-parent">
+            <div class="popup">
+                <div class="title">
+                    <div class="iconfont icon-cuowu contact-icon"></div>
+                    <h2>业务咨询</h2>
                 </div>
-                <div class="form-item-label">
-                    <label>联系方式：</label>
-                    <span class="iconfont icon-xinghao"></span>
-                    <input type="tel" name="company" placeholder="输入您的手机号码">
-                </div>
-                <div class="form-item-label">
-                    <label class="consult">咨询问题：</label>
-                    <span class="iconfont icon-xinghao consult"></span>
-                    <textarea name="textarea" type="text" name="company" placeholder="输入您想要咨询的问题"></textarea>
-                </div>
-                <div class="text">点击提交视为您已阅读并同意禧越公司《隐私政策》及《法律法规》</div>
-                <div class="form-submit">
-                    <button onclick="Submit()" class="submit">提交</button>
-                </div>
-                <div class="bottom">
-                    <p>400-099-8777</p>
-                    <div class="zuo"></div>
-                    <div class="you"></div>
-                </div>
-
+                <form id="signupForm" method="get" action="">
+                    <div class="form">
+                        <div class="form-item-label">
+                            <label>公司名称：</label>
+                            <span class="iconfont icon-xinghao"></span>
+                            <input type="text" name="companyName" placeholder="输入您的公司名称">
+                        </div>
+                        <div class="form-item-label">
+                            <label>联系方式：</label>
+                            <span class="iconfont icon-xinghao"></span>
+                            <input type="tel" name="companyPhone" placeholder="输入您的手机号码">
+                        </div>
+                        <div class="form-item-label">
+                            <label class="consult">咨询问题：</label>
+                            <!-- <span class="iconfont icon-xinghao consult"></span> -->
+                            <textarea name="textarea" type="text" name="company" placeholder="输入您想要咨询的问题"></textarea>
+                        </div>
+                        <div class="text">点击提交视为您已阅读并同意禧润公司《隐私政策》及《法律法规》</div>
+                        <div class="form-submit">
+                            <button class="submit">提交</button>
+                        </div>
+                        <div class="bottom">
+                            <p>0571-8609 8167</p>
+                            <div class="zuo"></div>
+                            <div class="you"></div>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -231,51 +264,56 @@
                 <li class="set">
                     <dl>
                         <dt>服务</dt>
-                        <dd>业务分类</dd>
-                        <dd>产品类型</dd>
-                        <dd>解决方案</dd>
-                        <dd>产品模式</dd>
+                        <dd><a href="./product.html">业务分类</a></dd>
+                        <dd><a href="product.html#linkOne">产品类型</a></dd>
+                        <dd><a href="./jiejue.html">解决方案</a></dd>
+                        <dd><a href="jiejue.html#linkThree">合作模式</a></dd>
                     </dl>
                 </li>
                 <li class="set">
                     <dl>
                         <dt>公司</dt>
-                        <dd>业务分类</dd>
-                        <dd>产品类型</dd>
-                        <dd>解决方案</dd>
-                        <dd>产品模式</dd>
+                        <dd><a href="./aboutUs.html">关于我们</a></dd>
+                        <dd><a href="index.html#linkFour">联系我们</a></dd>
+                        <dd><a href="./rencai.html">人才招聘</a></dd>
+                        <dd><a href="aboutUs.html#linkFive">新闻咨询</a></dd>
                     </dl>
                 </li>
                 <li class="end">
                     <p>业务资讯专线：</p>
-                    <p class="pt number">400-099-8777</p>
-                    <p class="pt">联系邮箱：xy@seniornet.cn</p>
+                    <p class="pt number">0571-8609 8167</p>
+                    <p class="pt">联系邮箱：hr@tonher.cn</p>
                     <p class="pt last">
-                        <span class="text-one lf">办公地址：杭州市拱墅区祥园路139号浙大网新智慧立方A座605</span>
+                        <span class="text-one lf">办公地址：杭州市江干区江宁路553号东溪德必易园B3106</span>
                     </p>
                 </li>
             </ul>
             <div class="line-content">
                 <div class="writer">
                     <p>
-                        Copyright @ 2016-2019 禧润通和（杭州）科技有限公司 All Rights Resvered
-                        <a href="javascript:;">浙ICP备16035416号</a>
+                        Copyright © 2020-2021 禧润通和（杭州）科技有限公司 All Rights Resvered
+                        <!-- <a href="javascript:;">增值电信业务经营许可证：浙B2-20140331 - 浙ICP备13037466号</a> -->
                     </p>
                     <span>|</span>
                     <p>
-                        <img src="https://cos.xiaodashi.com/static/offical/offical/img/index/gov.png">
-                        <a href="javascript:;">浙公网安备 33010302003475号-4</a>
+                        <!-- <img src="https://cos.xiaodashi.com/static/offical/offical/img/index/gov.png"> -->
+                        <a href="javascript:;">增值电信业务经营许可证：浙B2-20193152 - 浙ICP备19000326号</a>
                     </p>
                 </div>
 
             </div>
         </div>
     </div>
+    <!--返回顶部-->
     <div class="back-top">
         <p class="huojian iconfont icon-huojian-X"></p>
         <p class="font">返回顶部</p>
     </div>
-
+    <!-- 联系客服 -->
+    <div class="sv">
+        <a href="http://wpa.qq.com/msgrd?v=3&uin=3267087600&site=qq&menu=yes"><span
+                class="iconfont icon-custom-service"> </span> <span>联系客服</span></a>
+    </div>
 </body>
 
 </html>

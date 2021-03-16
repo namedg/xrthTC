@@ -19,19 +19,19 @@ a {
 /*首页头部*/
 .header {
     width: 100%;
-    height: 101px;
+    height: 80px;
     background-color: #fff
 }
 
 .header .nav {
-    height: 101px;
+    height: 80px;
 }
 
 .header .nav .logo {
     float: left;
-    width: 218px;
-    height: 62px;
-    margin-top: 20px;
+    width: 180px;
+    height: 60px;
+    margin-top: 10px;
 }
 
 .header .nav .logo img {
@@ -40,82 +40,97 @@ a {
 
 .header .nav .nav-box {
     float: right;
-    height: 101px;
+    height: 80px;
 }
 
-.header .nav .nav-box ul {
-    display: flex;
-    height: 101px;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.header .nav .nav-box ul>li {
-    height: 101px;
+.header .nav .nav-box ul li {
     position: relative;
+    float: left;
 }
 
-.header .nav .nav-box ul li>a {
+.header .nav .nav-box ul>li>a {
     display: block;
     padding: 0 15px;
     font-size: 15px;
     color: #777777;
-    line-height: 101px;
+    margin-right: 8px;
+    line-height: 80px;
 }
 
 .header .nav .nav-box ul li .active {
-    background-color: #174FA4;
+    background: #D2A26B;
     color: #fff
 }
 
 .header .nav .nav-box ul li .small {
     position: absolute;
-    top: 101px;
+    top: 80px;
     left: 0;
-    width: 150px;
-    background-color: #174FA4;
+    width: 180px;
+    background: #FFFFFF;
+    box-shadow: 0px 3px 3px 0px rgba(110, 59, 0, 0.2);
     z-index: 5;
     display: none
 }
 
 .small li {
-    display: inline-block;
-    width: 130px;
-    height: 30px;
-    line-height: 30px;
-    font-size: 8px;
-    color: #fff;
-    font-family: "宋体";
-    padding-left: 20px;
-}
-
-.small li span {
-    font-size: 14px;
-    font-family: "微软雅黑";
-}
-
-.small li span a {
-    color: #fff;
+    display: flex;
+    align-items: center;
+    width: 180px;
+    height: 50px;
+    font-size: 16px;
 }
 
 .small .first {
-    margin-top: 25px
-}
-
-.small .end {
-    margin-bottom: 25px
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .small li span {
-    position: relative;
-    top: 0;
-    left: 0;
-    transition: all 0.2s
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 9px 9px 9px 17px;
 }
 
-.small li:hover span {
-    top: -2px;
-    left: 5px;
+.small li span img {
+    width: 100%;
+}
+
+.small li a {
+    display: inline-block;
+    color: #666;
+}
+
+/* 解决方案背景 */
+.project {
+    width: 100%;
+    height: 400px;
+    background: url(../img/jiejue_slices/banner@2x.png) no-repeat 100% 100%;
+    background-size: 100% 100%;
+    color: #fff;
+}
+
+.project .content {
+    text-align: center;
+}
+
+.project .content h1 {
+    font-size: 48px;
+    font-weight: 300;
+    padding: 125px 0 25px 0;
+}
+
+.project .content h2 {
+    font-size: 30px;
+    font-weight: 300;
+    padding-top: 25px;
+}
+
+.project .content .line {
+    width: 50%;
+    height: 2px;
+    margin: 0 auto;
+    background: #fff;
 }
 
 /* 合作案例 */
@@ -124,20 +139,81 @@ a {
     overflow: hidden;
 }
 
-.teamwork .content .title {
-    width: 64.5%;
-    text-align: center;
+.teamwork .content {
+    width: 68%;
     margin: 0 auto;
+}
+
+.teamwork .content .title {
+    width: 100%;
+    text-align: center;
     padding: 100px 0 80px;
-    font-weight: 400;
-    background: rgb(102, 156, 238);
+    font-size: 36px;
+}
+
+.teamwork .content .title span {
+    font-size: 16px;
+    color: #ccc;
+}
+
+.teamwork .content .hot {
+    padding: 0 26px;
+}
+
+.teamwork .content .hot ul li {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+.teamwork .content .hot ul li:hover img{
+    transform: scale(1.2);
+}
+.teamwork .content .hot ul li div {
+    width: 48%;
+}
+
+.teamwork .content .hot ul li .hot-img {
+    /* background: burlywood; */
+    /* margin-right: 38px; */
+    height: 400px;
+    overflow: hidden;
+}
+.teamwork .content .hot ul li .hot-img img{
+    width: 100%;
+    transition: all 0.5s;
+}
+.teamwork .content .hot ul li .hot-text {
+    padding-left: 39px;
+}
+
+.teamwork .content .hot ul li .hot-text .text1 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.teamwork .content .hot ul li .hot-text .line {
+    width: 140px;
+    height: 2px;
+    background: #E5C9A9;
+    margin: 20px 0;
+}
+
+.teamwork .content .hot ul li .hot-text .text2 {
+    line-height: 30px;
+}
+
+@media (max-width:1200px) {
+    .teamwork .content .hot li div {
+        width: 100%;
+    }
 }
 
 /* 联系我们 */
 .contact-us {
     width: 100%;
     height: 340px;
-    background: url(../image/information@2x.png) no-repeat 100% 100%;
+    background: url(../img/index_slices/lxwm.png) no-repeat 100% 100%;
     background-size: 100% 100%;
     text-align: center;
 }
@@ -179,7 +255,7 @@ a {
 .contact-us .popup .title {
     position: relative;
     height: 120px;
-    background: url(../image/yewuzixun.png) no-repeat 100% 100%;
+    background: url(../img/index_slices/yewuzixun.png) no-repeat 100% 100%;
     background-size: 100% 100%;
 }
 
@@ -280,75 +356,48 @@ a {
     border-top: 1px solid #dcdcdc;
 }
 
-/* 返回顶部 */
-.back-top {
-    position: fixed;
-    right: 40px;
-    bottom: 40px;
-    z-index: 1000;
-    width: 55px;
-    height: 55px;
-    color: #fff;
-    text-align: center;
-    line-height: 55px;
-    background: rgb(102, 156, 238);
-    border-radius: 50%;
-    box-shadow: 0 0 6px rgb(102, 156, 238);
-    /* box-shadow: 1px 1px 1px 1px rgba(101, 200, 224, 0.7); */
-    display: none;
-}
-
-.back-top :hover {
-    cursor: pointer;
-}
-
-.back-top .huojian {
-    font-size: 28px;
-}
-
-.back-top .font {
-    display: none;
-    font-size: 12px;
-}
-
 /* 最底部 */
 .footer {
     width: 100%;
+    background: #29292a;
+    position: relative;
 }
 
 .footer .content {
-    height: 232px;
-    padding: 80px 0 30px 0;
-    color: #666;
+    padding-top: 60px;
+    color: #fff;
 }
 
 .footer .content ul {
-    height: 232px;
+    height: 210px;
+    display: flex;
 }
 
-.footer li {
-    width: 25%;
-    height: 100px;
-    float: left;
+.footer .content ul li {
+    flex: 1.5;
 }
 
-.footer .set {
-    width: 225px !important;
+.footer .content ul li dd a {
+    color: #fff;
 }
 
-.footer li:first-child {
-    margin-right: 40px;
+.footer .content ul .first {
+    flex: 2.5;
+}
+
+.footer .content ul .end {
+    flex: 3.8;
 }
 
 .footer li .title {
-    font-weight: bold;
+    font-size: 16px;
+    /* font-weight: bold; */
 }
 
 .footer li .logo-img {
     width: 165px;
     height: 150px;
-    margin-bottom: 10px;
-    margin: 0 auto;
+    margin-left: 28px;
 }
 
 .footer li .logo-img img {
@@ -357,7 +406,7 @@ a {
 
 .footer li dt {
     padding-bottom: 12px;
-    color: black;
+    /* color: black; */
 }
 
 .footer li dd {
@@ -365,57 +414,101 @@ a {
     line-height: 26px;
 }
 
-.footer li:last-child p {
+.footer .content ul .end p {
     font-size: 14px;
-    line-height: 40px;
+}
+
+.footer .content ul .end .pt {
+    padding-top: 23px;
+}
+
+.footer .content ul .end p:nth-child(3) {
+    padding-top: 30px;
 }
 
 .footer li .number {
     font-weight: 500 !important;
     font-size: 24px !important;
-    color: #212121 !important;
-}
-
-.footer li .last {
-    line-height: normal !important;
-    padding-top: 8px;
-}
-
-.footer li .text-one {
-    width: 70px;
-    height: 40px;
-}
-
-.footer li .text-two {
-    width: 160px;
-    height: 40px;
 }
 
 .footer .line-content {
     width: 100%;
-    border-top: 1px solid rgb(231, 231, 231);
+    border-top: 1px solid #4f4f4f;
     height: 50px;
 }
 
 .footer .line-content .writer {
-    height: 50px;
+    height: 49px;
     font-size: 12px;
     font-weight: 400;
-    color: #666;
-    /* margin-top: 10px; */
+    color: #d4d4d4;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
 .footer .line-content .writer a {
     font-size: 12px;
     font-weight: 400;
-    color: #666;
+    color: #d4d4d4;
+}
+
+.footer .line-content .writer span {
+    padding: 0 10px;
 }
 
 .footer .line-content .writer img {
     width: 16px;
     height: 16px;
     vertical-align: bottom;
+}
+
+/* 返回顶部 */
+.back-top {
+    position: fixed;
+    right: 25px;
+    bottom: 40px;
+    z-index: 1000;
+    width: 55px;
+    height: 55px;
+    color: #D2A26B;
+    text-align: center;
+    line-height: 55px;
+    background: #f4f4f4;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(121, 119, 118, 0.5);
+    display: none;
+}
+
+.back-top :hover {
+    cursor: pointer;
+}
+
+.back-top .huojian {
+    font-size: 32px;
+    color: #D2A26B;
+}
+
+.back-top .font {
+    display: none;
+    font-size: 12px;
+}
+
+/* 联系客服 */
+.sv {
+    position: fixed;
+    top: 180px;
+    right: 0;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 14px;
+    color: #fff;
+    background: #D2A26B;
+    display: none;
+}
+
+.sv a {
+    color: #fff;
 }

@@ -140,10 +140,28 @@ $(function () {
 
     //联系我们会话框
     $('.contact-us .us').click(function () {
-        $('.popup').css('display', 'block')
+        $('.contact-us .shade-parent').fadeIn(500)
     })
     $('.contact-icon').click(function () {
-        $('.popup').css('display', 'none')
+        $('.contact-us .shade-parent').fadeOut(500)
+    })
+
+    // 表单验证
+    $('form').validate({
+        rules: {
+            companyName: {
+                required: true,
+                // rangelength: [2, 6]
+            },
+            companyPhone: "required"
+        },
+        messages: {
+            companyName: {
+                required: "* 请先输入公司名",
+                // rangelength: "用户名的长度在2-6位"
+            },
+            companyPhone: "* 请先输入手机号"
+        }
     })
 
     /*滚动条滚动，对应的"rightsidebar"变化*/
@@ -158,13 +176,14 @@ $(function () {
         }
     })
 
-
     //返回顶部特效
     $(window).scroll(function () {
         if ($(document).scrollTop() > 0) {
-            $(".back-top").css("display", "block")
+            $(".back-top").fadeIn(500)
+            $(".sv").slideDown(500)
         } else {
-            $(".back-top").css("display", "none")
+            $(".back-top").fadeOut()
+            $(".sv").slideUp()
         }
     })
 

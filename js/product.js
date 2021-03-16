@@ -54,13 +54,15 @@ $(function () {
     $('.contact-icon').click(function () {
         $('.popup').css('display', 'none')
     })
-
+    
     //返回顶部特效
     $(window).scroll(function () {
         if ($(document).scrollTop() > 0) {
-            $(".back-top").css("display", "block")
+            $(".back-top").fadeIn(500)
+            $(".sv").slideDown(500)
         } else {
-            $(".back-top").css("display", "none")
+            $(".back-top").fadeOut()
+            $(".sv").slideUp()
         }
     })
 

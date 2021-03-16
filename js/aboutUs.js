@@ -60,13 +60,41 @@ $(function () {
         $(".dots li").eq(CK).addClass("active").siblings().removeClass("active")
     })
 
+    // 地图
+    new BaiduMap({
+        id: "map-container",
+        title: {
+            text: "禧润通和（杭州）科技有限公司",
+            className: "map-title"
+        },
+        content: {
+            className: "map-content",
+            text: ["地址：杭州市江干区江宁路553号东溪德必易园B3106", "电话：0571-8609 8167"]
+        },
+        point: {
+            lng: "120.224181",
+            lat: "30.297029"
+        },
+        level: 15,
+        zoom: true,
+        // type: ["地图", "卫星", "三维"],
+        width: 320,
+        height: 88,
+        icon: {
+            url: "../img/aboutUs_slices/icon.png",
+            width: 36,
+            height: 36
+        }
+    });
 
     //返回顶部特效
     $(window).scroll(function () {
         if ($(document).scrollTop() > 0) {
-            $(".back-top").css("display", "block")
+            $(".back-top").fadeIn(500)
+            $(".sv").slideDown(500)
         } else {
-            $(".back-top").css("display", "none")
+            $(".back-top").fadeOut()
+            $(".sv").slideUp()
         }
     })
 

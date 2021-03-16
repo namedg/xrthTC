@@ -49,14 +49,14 @@ $(function () {
     })
     // 职位列表下拉框展示
     var directionNum = 0
-    $('.position .position-content .list p').click(function () {
+    $('.position .position-content .list').click(function () {
         directionNum += 1
         if (directionNum == 1) {
-            $(this).next().removeClass('icon-xia')
-            $(this).next().addClass('icon-shang')
+            $('.position-direction').removeClass('icon-xia')
+            $('.position-direction').addClass('icon-shang')
         } else if (directionNum == 2) {
-            $(this).next().removeClass('icon-shang')
-            $(this).next().addClass('icon-xia')
+            $('.position-direction').removeClass('icon-shang')
+            $('.position-direction').addClass('icon-xia')
             directionNum = 0
         }
     })
@@ -87,9 +87,11 @@ $(function () {
     //返回顶部特效
     $(window).scroll(function () {
         if ($(document).scrollTop() > 0) {
-            $(".back-top").css("display", "block")
+            $(".back-top").fadeIn(500)
+            $(".sv").slideDown(500)
         } else {
-            $(".back-top").css("display", "none")
+            $(".back-top").fadeOut()
+            $(".sv").slideUp()
         }
     })
 
